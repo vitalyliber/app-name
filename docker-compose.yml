@@ -1,0 +1,19 @@
+version: "3"
+
+volumes:
+  db: {}
+
+services:
+  db:
+    image: postgres:12
+    volumes:
+      - db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=postgres
+
+  redis:
+    image: redis:4.0.12-alpine
+    ports:
+      - 6379:6379
