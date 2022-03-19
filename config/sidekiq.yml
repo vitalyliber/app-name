@@ -1,0 +1,5 @@
+:schedule:
+  hard_job:
+    cron: '0 * * * * *'   # запускать каждую минуту
+    args: [30]
+    class: HardJob
