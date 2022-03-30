@@ -19,3 +19,4 @@ jobs:
           HOST: 116.203.50.63
           PROJECT: app-name
           APP_CONFIG: ${{ secrets.APP_CONFIG }}
+          BRANCH: main
