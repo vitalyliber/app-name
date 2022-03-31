@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Dokku deploy
-        uses: vitalyliber/dokku-github-action@v6.2
+        uses: vitalyliber/dokku-github-action@master
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           HOST: 116.203.50.63
