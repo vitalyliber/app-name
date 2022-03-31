@@ -4,18 +4,18 @@ on:
   push:
     branches:
       - main
+      - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
       - name: Dokku deploy
-        uses: vitalyliber/dokku-github-action@master
+        uses: vitalyliber/dokku-github-action@v6.2
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          HOST: 116.203.50.63
-          PROJECT: app-name
+          HOST: ${{ secrets.HOST }}
+          PROJECT: ${{ secrets.PROJECT }}
           APP_CONFIG: ${{ secrets.APP_CONFIG }}
