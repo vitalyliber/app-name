@@ -3,8 +3,7 @@ name: CD
 on:
   push:
     branches:
-      - main
-      - master
+      - ${{ github.event.repository.default_branch }}
 
 jobs:
   build:
